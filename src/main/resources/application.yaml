@@ -26,6 +26,9 @@ spring:
     corsAllowedMethods:
       - POST
       - GET
+    app:
+      jwtSecret: "RDQY8uLxKZxPdgoSnYLkBdD5UkfMsqL16qxQ7ye0pCd0gxkjdyXSDuj4439B5vmWFS0Y8RA8e4MZPG7FHdI8eg=="
+      jwtExpirationInMs: "300000"
 logging:
   level:
     org:

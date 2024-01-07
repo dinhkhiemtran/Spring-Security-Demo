@@ -17,5 +17,11 @@ public class YamlConfig {
     List<String> permitEndpoint;
     List<String> corsAllowedOrigins;
     List<String> corsAllowedMethods;
+
+    @Data
+    public static class App {
+      String jwtSecret;
+      String jwtExpirationInMs;
+    }
   }
 }

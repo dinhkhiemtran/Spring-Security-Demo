@@ -9,14 +9,14 @@ import lombok.Data;
 
 @Data
 public class SignUpRequest implements Sanitizer<SignUpRequest> {
-  @NotBlank
+  @NotBlank(message = "Name is not null.")
   private String name;
-  @NotBlank
+  @NotBlank(message = "Username is not null.")
   private String username;
-  @NotBlank
-  @Email
+  @NotBlank(message = "Email is not null or empty.")
+  @Email(message = "Email is not valid.")
   private String email;
-  @NotBlank
+  @NotBlank(message = "Password is not null.")
   private String password;
 
   public User toEntity() {
